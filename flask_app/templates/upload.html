@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CDNs -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>PrintCraft</title>
+</head>
+<!-- <body class="bg-white h-full {% if msg %} h-full {% else %} h-screen {% endif %}"> -->
+<body class="bg-white h-full">
+    <div class="mx-10 py-2">
+        <h2 class="text-4xl text-center py-10 text-blue-600">PrintCraft</h2>
+        
+        <!-- action btn : Github, Simulation, Documantation -->
+        <section class="mb-4">
+            <div>
+                <div class="flex justify-end">
+                    <a href="#" target="_blank" 
+                    class="p-4 border rounded mx-2 text-gray-600 border-gray-600 shadow-xl hover:text-gray-800 hover:bg-gray-200"> 
+                    <div>Github</div></a>
+                    <a href="#" target="_blank" 
+                    class="p-4 border rounded mx-2 text-gray-600 border-gray-600 shadow-xl hover:text-gray-800 hover:bg-gray-200"> 
+                    <div>Simulation</div></a>
+                    <a href="#" target="_blank" 
+                    class="p-4 border rounded mx-2 text-gray-600 border-gray-600 shadow-xl hover:text-gray-800 hover:bg-gray-200"> 
+                    <div>Documantation</div></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="shadow-xl">
+            <div class="grid grid-cols-3 gap-4">
+
+                <div class="border rounded-l-lg p-10">
+
+                    <h1 class="text-gray-600">PrintCraft : Upload an Image</h1>
+                    <form method=post enctype=multipart/form-data>
+                        <input type=file name=file class="w-6/6 p-4 h-52 my-6">
+                        <div class="flex justify-center">
+                            <input type=submit value=Upload class="border-2 p-2 my-4 rounded text-gray-500 hover:border-gray-800 hover:text-gray-800">
+                        </div>
+                    
+                    </form>
+                </div>
+                <div class="col-span-2 border rounded-r-lg p-10 ">
+                    <h2 class="text-xl text-center text-gray-600 mb-10">Image Preview</h2>
+                    <div id="image-container" >
+                        <div class="grid grid-cols-3 gap-2 flex justify-center">
+                            {% for image in params.uploaded_images %}
+                            <div >
+                                <img src="{{ url_for('uploaded_file', filename=image.filename) }}" alt="Image" class="p-4 border" >
+                                <p>{{ image.filename }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>  
+                    </div>  
+                </div>
+            </div>
+        </section>
+
+        <div id="image-container">
+            {% for image in uploaded_images %}
+              <img src="{{ url_for('uploaded_file', filename=image) }}" alt="Image">
+            {% endfor %}
+        </div>
+
+        <!-- display servo cods -->
+        <section>
+            <div>
+                <div class="col-span-2 border rounded-r-lg p-10 ">
+                    <h2 class="text-xl text-center text-gray-600 mb-10">Servo Cordinates Created | Preview</h2>
+                    
+                    {% for line in params.fileData %}
+                        <h2 class="text-gray-500 mb-6">File: {{ line.file_name }} | Showing Only 10% content</h2> <hr>
+                        <pre>{{ line.file_content }}</pre>
+                    {% endfor %}
+                    <p class="text-xl">...</p>
+                    {% if params.fileData %}
+                        <div class="flex justify-end">
+                            <a href="{{ url_for('fullcontent') }}" target="_blank">
+                                <div class="border font-bold p-4 text-center text-gray-500 border-gray-500 hover:border-gray-800 hover:text-gray-800 rounded">View More
+                                </div>
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+
+        <!-- Documentation -->
+        <section>
+
+        </section>
+
+
+    </div>
+</body>
+</html>

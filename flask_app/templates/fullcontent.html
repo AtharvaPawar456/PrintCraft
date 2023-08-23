@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS : Design CDNs -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <title>Full Content</title>
+</head>
+<body class="bg-white font-mono">
+    <div class="mx-10">
+        <div class="py-4 rounded flex justify-center">
+            <a href="{{ url_for('upload_file') }}" 
+            class="border-2 p-4 my-4 rounded text-xl text-gray-500 border-gray-400 hover:border-gray-800 hover:text-gray-800">BACK</a>
+        </div>
+        
+        <div class="my-4">
+            {% for line in params.content %}
+            <h2 class="text-2xl text-gray-800 py-4">File: {{ line.file_name }} 'Showing 100% content'</h2> <hr>
+            <pre class="text-base text-gray-500 py-4">{{ line.file_content }}</pre>
+            {% endfor %}
+        </div>
+    </div>
+    <section class="p-2"> </section>
+
+</body>
+</html>

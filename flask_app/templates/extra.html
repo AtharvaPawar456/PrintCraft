@@ -1,0 +1,59 @@
+<!-- Upload a File -->
+    <!-- <section class="mx-10 my-6">   
+        <div class="grid grid-cols-3 gap-4">
+            <div class="border rounded-l-lg p-10">
+                <h2 class="text-xl text-center text-gray-600 ">Upload a File</h2>
+                <form method="post" enctype="multipart/form-data" class="w-6/6 p-4 h-52 my-6">
+                    {{ content.form.as_p }}
+                    <div class="flex justify-center">
+                        <button type="submit" name="upload_files" class="border-2 p-2 my-4 rounded text-gray-500 hover:border-gray-800 hover:text-gray-800">{{ content.uploadBtn_value }}</button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="col-span-2 border rounded-r-lg p-10 ">
+                <h2 class="text-xl text-center text-gray-600 mb-10">Files Preview</h2>
+                
+                {% for line in content.fileData %}
+                    <h2 class="text-gray-500 mb-6">File: {{ line.file_name }} | Showing Only 10% content</h2> <hr>
+                    <pre>{{ line.file_content }}</pre>
+
+
+                {% endfor %}
+                {% if content.fileData %}
+                    <div class="flex justify-end">
+                        <a href="/fullcontent" target="_blank">
+                            <div class="border p-4 text-center text-gray-500 border-gray-500 hover:border-gray-800 hover:text-gray-800 rounded">see full content
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </section> -->
+
+
+
+
+    <div class="col-span-2 border rounded-r-lg p-10 ">
+        <h2 class="text-xl text-center text-gray-600 mb-10">Files Preview</h2>
+        
+        {% for line in content.fileData %}
+            <h2 class="text-gray-500 mb-6">File: {{ line.file_name }} | Showing Only 10% content</h2> <hr>
+            <pre>{{ line.file_content }}</pre>
+
+            <!-- {% if forloop.counter <= 5 %}
+                <pre>{{ line.file_content|safe }}</pre><br>
+            {% endif %} -->
+        {% endfor %}
+        {% if content.fileData %}
+            <div class="flex justify-end">
+                <a href="/fullcontent" target="_blank">
+                    <div class="border p-4 text-center text-gray-500 border-gray-500 hover:border-gray-800 hover:text-gray-800 rounded">see full content
+                    </div>
+                </a>
+            </div>
+        {% endif %}
+
+    </div>
