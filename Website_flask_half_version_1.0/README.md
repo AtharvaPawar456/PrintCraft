@@ -4,6 +4,8 @@
 
 PrintCraft is an innovative online 2D printer Servo Coordinates Generator and Marker application developed by Atharva Pawar. This project aims to bridge the gap between digital images and physical 2D prints by leveraging edge detection algorithms and servo control technology. By providing users with a user-friendly interface, PrintCraft empowers users to transform their digital images into tangible creations through the coordination of servo motors.
 
+## Simulation Link : `https://wokwi.com/projects/373838959010022401`
+
 ![IoT : ESP32 Simulation](https://github.com/AtharvaPawar456/PrintCraft/blob/main/flask_app/static/iot-simulation.jpeg)
 
 
