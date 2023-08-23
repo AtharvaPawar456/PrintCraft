@@ -12,8 +12,17 @@
 <!-- <body class="bg-white h-full {% if msg %} h-full {% else %} h-screen {% endif %}"> -->
 <body class="bg-white h-full">
     <div class="mx-10 py-2">
-        <h2 class="text-4xl text-center py-10 text-blue-600">PrintCraft</h2>
-        
+        <div class="grid grid-cols-3 gap-4">
+            <div></div>
+            <div class="flex mx-10">
+                <img src="static\PrintCraft-logo.png" alt="logo" class="w-20 h-20 m-10 border-2 border-gray-500 shadow">
+                <div class="flex items-center">
+                    <h2 class="text-4xl text-center py-10 text-blue-600 mx-2">PrintCraft</h2>
+                </div>
+            </div>
+            <div></div>
+        </div>
+
         <!-- action btn : Github, Simulation, Documantation -->
         <section class="mb-4">
             <div>
@@ -34,15 +43,16 @@
         <section class="shadow-xl">
             <div class="grid grid-cols-3 gap-4">
 
-                <div class="border rounded-l-lg p-10">
+                <div class="border rounded-l-lg p-10 ">
 
                     <h1 class="text-gray-600">PrintCraft : Upload an Image</h1>
-                    <form method=post enctype=multipart/form-data>
+                    <h1 class="text-orange-500"># Currently Out of Service !!!</h1>
+
+                    <form method=post enctype=multipart/form-data class="hidden">
                         <input type=file name=file class="w-6/6 p-4 h-52 my-6">
                         <div class="flex justify-center">
                             <input type=submit value=Upload class="border-2 p-2 my-4 rounded text-gray-500 hover:border-gray-800 hover:text-gray-800">
                         </div>
-                    
                     </form>
                 </div>
                 <div class="col-span-2 border rounded-r-lg p-10 ">
@@ -92,7 +102,7 @@
 
         <!-- footer -->
         <section>
-            <h2 class="text-xl text-center text-gray-600 mb-10">Developer : Atharva Pawar | PrintCraft Version 1.0</h2>
+            <h2 class="text-xl text-center text-gray-600 my-10">Developer : Atharva Pawar | PrintCraft Version 1.0</h2>
         </section>
 
 
