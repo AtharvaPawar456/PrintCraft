@@ -1,45 +1,95 @@
-Certainly! Here's a template for the content you can include in your README file for the "PrintCraft: Online 2D Printer Servo Cordinates Generator" project:
+# PrintCraft: Online 2D Printer Servo Coordinates Generator and Marker
 
-# PrintCraft: Online 2D Printer Servo Cordinates Generator
+![PrintCraft Logo](https://github.com/AtharvaPawar456/PrintCraft/blob/main/Website_flask_half_version_1.0/static/PrintCraft-logo.png)
 
-PrintCraft is an online 2D printer Servo Cordinates Generator application built using Flask, a Python web framework. This application allows users to upload images, convert them to grayscale, perform edge detection, and generate servo coordinates for 3D printing. The servo coordinates are calculated based on the edges detected in the image, enabling users to create physical 2D prints from their digital images.
+PrintCraft is an innovative online 2D printer Servo Coordinates Generator and Marker application developed by Atharva Pawar. This project aims to bridge the gap between digital images and physical 2D prints by leveraging edge detection algorithms and servo control technology. By providing users with a user-friendly interface, PrintCraft empowers users to transform their digital images into tangible creations through the coordination of servo motors.
+
+## Simulation Link : `https://wokwi.com/projects/373838959010022401`
+
+![IoT : ESP32 Simulation](https://github.com/AtharvaPawar456/PrintCraft/blob/main/flask_app/static/iot-simulation.jpeg)
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Contributions](#contributions)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+
+## Introduction
+
+PrintCraft is a unique web application designed to facilitate the conversion of digital images into physical 2D prints using servo motor coordination. The application's backend, built using the Flask web framework, processes uploaded images, performs grayscale conversion, applies edge detection techniques, and generates precise servo coordinates for each point on the detected edges.
 
 ## Features
 
-- Upload an image: Users can upload images in popular formats such as PNG, JPG, JPEG, and GIF.
-- Grayscale Conversion: Uploaded images are automatically converted to grayscale for processing.
-- Edge Detection: Edge detection is applied to the grayscale image to identify prominent edges.
-- Servo Coordinate Generation: Servo coordinates for 2D printing are generated based on the detected edges.
-- Display Images: Uploaded images and processed grayscale images can be displayed.
-- Display Servo Coordinates: Users can view the generated servo coordinates in a user-friendly format.
-- Delete Files: Users can delete uploaded images and generated servo coordinate files.
-- User-friendly Interface: The web application provides an intuitive user interface for interacting with the 3D printing process.
+- **Image Upload:** Users can upload images in various formats, including PNG, JPG, JPEG, and GIF.
+
+- **Grayscale Conversion:** Uploaded images are automatically transformed into grayscale, preparing them for edge detection.
+
+- **Edge Detection:** The application utilizes edge detection algorithms to identify significant edges within the grayscale image.
+
+- **Servo Coordinate Generation:** Based on the identified edges, PrintCraft generates servo coordinates for precise 2D printing.
+
+- **Interactive Interface:** A user-friendly web interface enables users to upload images, view grayscale versions, and examine generated servo coordinates.
+
+- **Coordinate Display:** Users can easily view and download the servo coordinates in a clear and structured format.
+
+- **Image Deletion:** Uploaded images and associated data can be efficiently deleted, ensuring a clutter-free workspace.
+
+## Getting Started
+
+To get started with PrintCraft, follow these steps:
+
+Website Deployed Link : `https://printcraft.atharvapawar.repl.co/` 
+
+1. Clone the repository: `git clone https://github.com/AtharvaPawar456/PrintCraft.git`
+
+2. Navigate to the project directory: `cd PrintCraft`
+
+3. Install the required dependencies: `pip install -r requirements.txt`
+
+4. Run the Flask development server: `python app.py`
+
+5. Access the application through your web browser: `http://localhost:5000`
+
+## Usage
+
+1. Upload an image through the intuitive web interface.
+
+2. The application will convert the image to grayscale and perform edge detection.
+
+3. Servo coordinates for 2D printing will be generated based on the detected edges.
+
+4. View and download the servo coordinates for your printing needs.
+
+5. Repeat the process for new images or modify the existing workflow.
+
+## Technologies Used
+
+- Flask: A lightweight and flexible web framework for building web applications.
+
+- OpenCV: A powerful computer vision library used for image processing and edge detection.
+
+- ESP32Servo: A library for controlling servo motors in Arduino-based projects.
+
+- HTML, CSS, JavaScript: Frontend technologies for creating a responsive and interactive user interface.
 
 ## Installation
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/AtharvaPawar456/PrintCraft.git
-   cd PrintCraft
-   ```
+1. Install Python: Download and install Python from [python.org](https://www.python.org/downloads/).
 
-2. Create a virtual environment and activate it:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate   # On Windows: venv\Scripts\activate
-   ```
+2. Clone the repository: `git clone https://github.com/AtharvaPawar456/PrintCraft.git`
 
-3. Install the required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
+3. Navigate to the project directory: `cd PrintCraft`
 
-4. Run the application:
-   ```bash
-   python app.py
-   ```
+4. Install required dependencies: `pip install -r requirements.txt`
 
-5. Access the application in your web browser at `http://localhost:5000`.
+5. Run the application: `python app.py`
+
+6. Access the application through your web browser at `http://localhost:5000`.
 
 ## Basic pip cmds
     ```
@@ -80,21 +130,20 @@ PrintCraft is an online 2D printer Servo Cordinates Generator application built 
             If the file is not found, a default message is provided.
             Creates a dictionary containing the file name and its 10% content or a default message.
 
-## Usage
+## Contributions
 
-1. Upload an image: Choose an image file (PNG, JPG, JPEG, or GIF) and upload it to the application.
-2. View Processed Images: View the uploaded image, grayscale image, and edges-detected image.
-3. View Servo Coordinates: Explore the generated servo coordinates based on the edges of the image.
-4. Delete Files: Remove uploaded images and generated servo coordinate files as needed.
-
-## Contributing
-
-Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request. For major changes, please open an issue first to discuss the proposed changes.
+Contributions to PrintCraft are welcome! If you find any issues or have suggestions for enhancements, please feel free to create a pull request or open an issue.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+Special thanks to the open-source community for providing valuable libraries and tools that have contributed to the development of PrintCraft.
+
+## Contact
+
+For inquiries and support, please contact Atharva Pawar at talktoatharva14@gmail.com.
 
 ---
-
-Feel free to customize this template to match the specifics of your project. Include additional sections as needed, such as deployment instructions, troubleshooting, or contact information.
